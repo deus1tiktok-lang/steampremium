@@ -201,13 +201,18 @@ export const FinalCTASection: React.FC = () => {
                     <div className="bg-[#111] p-8 md:p-12 rounded-3xl border border-cyan-500/30 shadow-[0_0_50px_rgba(6,182,212,0.1)] inline-block w-full max-w-lg">
                          <p className="text-sm text-gray-400 mb-2">Oferta exclusiva por tempo limitado</p>
                          <div className="flex items-center justify-center gap-3 mb-8">
-                             <span className="text-gray-500 line-through text-2xl">R$ 297,00</span>
-                             <span className="text-6xl font-bold text-white">R$ 49,90</span>
+                             {/* OLD Price: Red & Crossed Out */}
+                             <span className="text-red-500 line-through text-2xl font-bold opacity-80">R$ 297,00</span>
+                             {/* NEW Price: Green for Savings/Profit */}
+                             <span className="text-6xl font-bold text-green-400 drop-shadow-[0_0_15px_rgba(74,222,128,0.3)]">R$ 49,90</span>
                          </div>
 
-                         <button className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white text-xl font-bold py-6 rounded-xl shadow-lg hover:shadow-orange-500/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mb-6 animate-pulse">
+                         <a 
+                            href="https://pay.cakto.com.br/xwzhgxb_466843"
+                            className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white text-xl font-bold py-6 rounded-xl shadow-lg hover:shadow-orange-500/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mb-6 animate-pulse"
+                         >
                             🔥 COMEÇAR A JOGAR AGORA
-                         </button>
+                         </a>
                          
                          <div className="flex flex-col gap-2 items-center text-xs text-gray-500">
                             <div className="flex items-center gap-1"><Shield size={14} /> Compra 100% Segura</div>
